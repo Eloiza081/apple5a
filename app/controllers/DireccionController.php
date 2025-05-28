@@ -1,5 +1,4 @@
 PHP
-
 <?php
 // En DireccionController.php
 ini_set('display_errors', 1);
@@ -146,7 +145,6 @@ class DireccionController {
 if (isset($_GET['action'])) {
     $controller = new DireccionController();
     $action = $_GET['action'];
-
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
     } elseif (isset($_POST['iddireccion'])) {
@@ -154,8 +152,7 @@ if (isset($_GET['action'])) {
     } else {
         $id = null;
     }
-
-    switch ($action) {
+ switch ($action) {
         case 'index':
             $controller->index();
             break;
